@@ -10,10 +10,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <NotFound />,
   },
   {
     path: "/genre/:genre",
     element: <App />,
+    errorElement: <NotFound />,
   },
   {
     path: "/movies/:id",
@@ -21,7 +23,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "*",
+    path: "/NotFound",
     errorElement: <NotFound />,
   },
 ]);
