@@ -3,8 +3,8 @@ function DeviceIcon() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className="icon icon-tabler icon-tabler-device-tv text-teal-600"
-      width="30"
-      height="30"
+      width="50"
+      height="50"
       viewBox="0 0 24 24"
       strokeWidth="2"
       stroke="currentColor"
