@@ -6,7 +6,7 @@ import Menu from "../assets/MenuIcon.jsx";
 function Navbar() {
   const activeStyle = "bg-teal-500 text-white px-3 py-2 rounded-lg";
   return (
-    <nav className="flex justify-between p-5 bg-white lg:justify-center lg:gap-14 font-mono">
+    <nav className="flex justify-between bg-white lg:justify-center lg:gap-14 font-mono">
       <ul className="flex flex-row justify-center items-center gap-5">
         <li>
           <NavLink to="/">
