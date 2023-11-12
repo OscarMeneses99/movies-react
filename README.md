@@ -22,14 +22,14 @@ To get a local copy of this project and run it on your machine, follow these ste
 
 
 ```bash
-git clone https://github.com/OscarMeneses99/movies-backend.git
+git clone git@github.com:OscarMeneses99/movies-react.git
 ```
 
 4. Change the current working directory to the cloned repository:
 
 
 ```bash
-cd movies-backend
+cd movies-react
 ```
 
 ### Installing Dependencies
