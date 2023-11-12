@@ -1,9 +1,9 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useContext } from "react";
-import Title from "../components/Title.jsx";
 import ChevronIcon from "../assets/ChevronLeftIcon.jsx";
 import ButtonDelete from "../components/ButtonDelete.jsx";
 import ButtonModify from "../components/ButtonModify.jsx";
+import Footer from "../components/Footer.jsx";
 import { MovieContext } from "../context/Context.jsx";
 
 function MovieInfo() {
@@ -15,10 +15,10 @@ function MovieInfo() {
   console.log(movies);
 
   if (!info) {
-    navigate("/");
+    navigate("*");
   }
   return (
-    <body className="mx-auto max-w-lg">
+    <>
       <header>
         <Link
           to="/"
@@ -28,7 +28,7 @@ function MovieInfo() {
           <h2 className="font-mono font-extrabold text-3xl">Home Page</h2>
         </Link>
       </header>
-      <main className="grid grid-cols-1 justify-center md:grid-cols-[350px_1fr] gap-3 px-8 mb-10">
+      <main className="grid grid-cols-1 justify-center mx-auto max-w-xl md:grid-cols-[350px_1fr] gap-3 px-8 mb-10">
         <picture className="w-full gap-5">
           <div className="flex mb-3 gap-2">
             <ButtonDelete />
@@ -41,31 +41,31 @@ function MovieInfo() {
           />
         </picture>
 
-        <aside className="flex flex-col content-start md:w-[500px] md:mt-10 p-2">
-          <ul>
-            <span className="text-2xl font-bold text-teal-800 text-center md:text-left">
+        <aside className="flex flex-col items-center md:w-[500px] md:mt-10 p-2">
+          <ul className="text-left">
+            <span className="text-2xl font-bold text-teal-800 justify-center flex md:block">
               {info.title}
             </span>
             <li>
-              <span className="text-xl text-teal-700">Synopsis:</span>
+              <span className="text-xl text-teal-700">Synopsis: </span>
               <span className="text-lg font-mono">{info.synopsis}</span>
             </li>
             <li>
-              <span className="text-xl text-teal-700">Director:</span>
+              <span className="text-xl text-teal-700">Director: </span>
               <span className="text-lg font-mono">{info.director}</span>
             </li>
             <li>
-              <span className="text-xl text-teal-700">Year:</span>
+              <span className="text-xl text-teal-700">Year: </span>
               <span className="text-lg font-mono">{info.year}</span>
             </li>
 
             <li>
-              <span className="text-xl text-teal-700"> Duration:</span>
+              <span className="text-xl text-teal-700"> Duration: </span>
               <span className="text-lg font-mono">{info.duration} mins</span>
             </li>
 
             <ul>
-              <span className="text-xl text-teal-700">Genre:</span>
+              <span className="text-xl text-teal-700">Genre: </span>
               {info.genre.map((genre, index) => (
                 <li
                   key={index}
@@ -77,13 +77,16 @@ function MovieInfo() {
             </ul>
 
             <li>
-              <span className="text-xl text-teal-700">Rate:</span>
+              <span className="text-xl text-teal-700">Rate: </span>
               <span className="text-lg font-mono">{info.rate}</span>
             </li>
           </ul>
         </aside>
       </main>
-    </body>
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 }
 
