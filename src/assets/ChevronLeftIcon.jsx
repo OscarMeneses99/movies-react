@@ -2,7 +2,7 @@ function ChevronLeftIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="icon icon-tabler icon-tabler-chevron-left hover:text-gray-700"
+      className="icon icon-tabler icon-tabler-chevron-left flex"
       width="60"
       height="60"
       viewBox="0 0 24 24"

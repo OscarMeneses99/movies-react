@@ -6,14 +6,15 @@ import Menu from "../assets/MenuIcon.jsx";
 function Navbar() {
   const activeStyle = "bg-teal-500 text-white px-3 py-2 rounded-lg";
   return (
-    <nav className="flex justify-between bg-white lg:justify-center lg:gap-14 font-mono">
-      <ul className="flex flex-row justify-center items-center gap-5">
-        <li>
+    <nav className="flex justify-between items-center bg-white lg:justify-center lg:gap-14 font-mono font-semibold">
+      <ul className="flex flex-row justify-center
+      content-center items-center gap-5">
+        <li className="mr-3">
           <NavLink to="/">
             <DeviceIcon />
           </NavLink>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
             to="/genre/action"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -21,7 +22,7 @@ function Navbar() {
             Action
           </NavLink>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
             to="/genre/adventure"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -29,7 +30,7 @@ function Navbar() {
             Adventure
           </NavLink>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
             to="/genre/animation"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -37,7 +38,7 @@ function Navbar() {
             Animation
           </NavLink>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
             to="/genre/biography"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -45,7 +46,7 @@ function Navbar() {
             Biography
           </NavLink>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
             to="/genre/crime"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -53,7 +54,7 @@ function Navbar() {
             Crime
           </NavLink>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
             to="/genre/drama"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -61,7 +62,7 @@ function Navbar() {
             Drama
           </NavLink>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
             to="/genre/fantasy"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -69,7 +70,7 @@ function Navbar() {
             Fantasy
           </NavLink>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
             to="/genre/romance"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -77,7 +78,7 @@ function Navbar() {
             Romance
           </NavLink>
         </li>
-        <li className="hidden lg:block">
+        <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
             to="/genre/sci-fi"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -86,7 +87,7 @@ function Navbar() {
           </NavLink>
         </li>
       </ul>
-      <ul className="flex justify-center items-center">
+      <ul className="flex justify-center items-center content-center">
         <li className="hidden lg:block">
           <UserIcon />
         </li>

@@ -23,7 +23,7 @@ const ButtonDelete = ({ id }) => {
   return (
     <button
       onClick={handleDelete}
-      className="flex place-content-center items-center w-1/2 h-[40px] border rounded-lg bg-rose-500 hover:bg-rose-600 text-white"
+      className="flex place-content-center items-center w-1/2 h-[40px] border rounded-lg bg-rose-500 transition-all hover:bg-rose-600 hover:scale-105 text-white"
     >
       <span>Delete</span>
       <span className="ml-2">

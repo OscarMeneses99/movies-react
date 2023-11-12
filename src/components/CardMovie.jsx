@@ -4,7 +4,7 @@ function CardMovie({ data }) {
   const { _id, title, poster } = data;
   return (
     <Link
-      className="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl"
+      className="hover:scale-105 inline-block transition-all hover:shadow-2xl"
       to={`/movies/${_id}`}
     >
       <img

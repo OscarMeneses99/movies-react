@@ -1,25 +1,11 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import CardMovie from "../components/CardMovie.jsx";
+import { MovieContext } from "../context/Context.jsx";
 
 function ListOfMovies() {
-  const [movies, setMovies] = useState([]);
-
-  const fetchMovies = async () => {
-    try {
-      const response = await fetch(
-        "https://movies-backend.3.us-1.fl0.io/api/movies"
-      );
-
-      setMovies(await response.json());
-    } catch (error) {
-      console.error("Error fetching movies:", error);
-    }
-  };
-  useEffect(() => {
-    fetchMovies();
-  }, []);
+  const { movies } = useContext(MovieContext);
   return (
-    <section className="grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-5 px-4">
+    <section className="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-5 px-4">
       {movies.length > 0 ? (
         movies.map((movie) => (
           <figure key={movie._id}>

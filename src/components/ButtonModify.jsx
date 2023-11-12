@@ -27,7 +27,7 @@ function ButtonModify({ id, data }) {
   return (
     <button
       onClick={handleModify}
-      className="flex place-content-center items-center w-1/2 h-[40px] border rounded-lg bg-cyan-500 hover:bg-cyan-600 text-white"
+      className="flex place-content-center items-center w-1/2 h-[40px] border rounded-lg bg-cyan-500 transition-all hover:bg-cyan-600 hover:scale-105 text-white"
     >
       <span>Modify</span>
       <span className="ml-2">

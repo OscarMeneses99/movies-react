@@ -1,7 +1,9 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { MovieProvider } from "./context/Context.jsx";
 import App from "./App.jsx";
+import MovieInfo from "./pages/MovieInfo.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 const router = createBrowserRouter([
@@ -14,6 +16,10 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
+    path: "/movies/:id",
+    element: <MovieInfo />,
+  },
+  {
     path: "*",
     element: <NotFound />,
   },
@@ -21,8 +27,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+    <MovieProvider>
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
+    </MovieProvider>
   </React.StrictMode>
 );
