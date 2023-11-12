@@ -12,10 +12,10 @@ function MovieInfo() {
   const { id } = useParams();
 
   const info = movies.find((movie) => movie._id === id);
-  console.log(movies);
 
   if (!info) {
-    navigate("*");
+    navigate("/NotFound");
+    return null;
   }
   return (
     <>
