@@ -7,7 +7,7 @@ import Menu from "./Menu.jsx";
 
 function Navbar() {
   const activeStyle = "bg-teal-500 text-white px-3 py-2 rounded-lg";
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
