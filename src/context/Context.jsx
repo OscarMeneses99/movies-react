@@ -4,6 +4,7 @@ export const MovieContext = createContext();
 
 export const MovieProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
+  const [searchByTitle, setSearchByTitle] = useState("");
 
   useEffect(() => {
     fetch("https://movies-backend.3.us-1.fl0.io/api/movies")
@@ -12,7 +13,9 @@ export const MovieProvider = ({ children }) => {
   }, []);
 
   return (
-    <MovieContext.Provider value={{ movies, setMovies }}>
+    <MovieContext.Provider
+      value={{ movies, setMovies, searchByTitle, setSearchByTitle }}
+    >
       {children}
     </MovieContext.Provider>
   );

@@ -7,8 +7,10 @@ function Navbar() {
   const activeStyle = "bg-teal-500 text-white px-3 py-2 rounded-lg";
   return (
     <nav className="flex justify-between items-center bg-white lg:justify-center lg:gap-14 font-mono font-semibold">
-      <ul className="flex flex-row justify-center
-      content-center items-center gap-5">
+      <ul
+        className="flex flex-row justify-center
+      content-center items-center gap-5"
+      >
         <li className="mr-3">
           <NavLink to="/">
             <DeviceIcon />

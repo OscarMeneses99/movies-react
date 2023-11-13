@@ -5,7 +5,7 @@ import Title from "../components/Title.jsx";
 import ListOfMovies from "../utils/ListOfMovies.jsx";
 import Footer from "../components/Footer.jsx";
 
-const Movies = () => {
+const Movies = ({ genre }) => {
   return (
     <>
       <header>
@@ -14,7 +14,7 @@ const Movies = () => {
       <main className="mx-auto max-w-xl mt-7">
         <Title />
         <Search />
-        <ListOfMovies />
+        <ListOfMovies genre={genre} />
         <Outlet />
       </main>
       <footer>
