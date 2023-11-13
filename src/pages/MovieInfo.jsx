@@ -32,7 +32,7 @@ function MovieInfo() {
       <main className="grid grid-cols-1 justify-center mx-auto max-w-xl md:grid-cols-[350px_1fr] gap-3 px-8 mb-10">
         <picture className="w-full gap-5">
           <div className="flex mb-3 gap-2">
-            <ButtonDelete />
+            <ButtonDelete id={info._id} />
             <ButtonModify />
           </div>
           <img

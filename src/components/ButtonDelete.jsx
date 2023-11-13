@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import TrashIcon from "../assets/TrashIcon.jsx";
 import {
   ToastMovieDeleted,
@@ -5,6 +6,7 @@ import {
 } from "../utils/Notifications.jsx";
 
 const ButtonDelete = ({ id }) => {
+  const navigate = useNavigate();
   const handleDelete = async () => {
     const response = await fetch(
       `https://movies-backend.3.us-1.fl0.io/api/movies/${id}`,
@@ -14,7 +16,7 @@ const ButtonDelete = ({ id }) => {
     );
     if (response.ok) {
       ToastMovieDeleted();
-      //redireccionar a la pagina de inicio
+      navigate("/", { replace: true });
     } else {
       ToastMovieNotFound();
     }

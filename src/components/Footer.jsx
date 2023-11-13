@@ -9,7 +9,7 @@ function Footer() {
           </div>
 
           <p className="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right">
-            Copyright &copy; 2023. All rights reserved.
+            Copyright Oscar Meneses&copy; 2023. All rights reserved.
           </p>
         </div>
       </div>

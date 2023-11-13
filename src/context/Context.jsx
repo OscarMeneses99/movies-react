@@ -10,7 +10,7 @@ export const MovieProvider = ({ children }) => {
     fetch("https://movies-backend.3.us-1.fl0.io/api/movies")
       .then((res) => res.json())
       .then((data) => setMovies(data));
-  }, []);
+  }, [movies]);
 
   return (
     <MovieContext.Provider
