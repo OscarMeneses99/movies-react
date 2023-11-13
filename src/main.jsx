@@ -5,6 +5,7 @@ import { MovieProvider } from "./context/Context.jsx";
 import App from "./App.jsx";
 import MovieInfo from "./pages/MovieInfo.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import Menu from "./components/Menu.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/NotFound",
     element: <NotFound />,
+  },
+  {
+    path: "/menu",
+    element: <Menu />,
   },
 ]);
 
