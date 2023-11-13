@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { MovieContext } from "../context/Context.jsx";
 import TrashIcon from "../assets/TrashIcon.jsx";
 import {
   ToastMovieDeleted,
@@ -6,6 +8,7 @@ import {
 } from "../utils/Notifications.jsx";
 
 const ButtonDelete = ({ id }) => {
+  const { fetchMovies } = useContext(MovieContext);
   const navigate = useNavigate();
   const handleDelete = async () => {
     const response = await fetch(
@@ -15,10 +18,12 @@ const ButtonDelete = ({ id }) => {
       }
     );
     if (response.ok) {
+      fetchMovies();
       ToastMovieDeleted();
       navigate("/", { replace: true });
     } else {
       ToastMovieNotFound();
+      navigate("/NotFound", { replace: true });
     }
   };
 

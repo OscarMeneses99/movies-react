@@ -4,8 +4,8 @@ import "react-toastify/dist/ReactToastify.css";
 export function ToastMovieDeleted() {
   const notify = toast.success("Movie deleted", {
     position: "top-center",
-    autoClose: 1500,
-    hideProgressBar: false,
+    autoClose: 1000,
+    hideProgressBar: true,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
@@ -18,8 +18,8 @@ export function ToastMovieDeleted() {
 export function ToastMovieUpdated() {
   const notify = toast.success("Movie updated", {
     position: "top-center",
-    autoClose: 1500,
-    hideProgressBar: false,
+    autoClose: 1000,
+    hideProgressBar: true,
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,

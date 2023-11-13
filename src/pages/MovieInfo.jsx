@@ -10,7 +10,6 @@ function MovieInfo() {
   const { movies } = useContext(MovieContext);
   const navigate = useNavigate();
   const { id } = useParams();
-  window.scrollTo(0, 0);
 
   const info = movies.find((movie) => movie._id === id);
 
