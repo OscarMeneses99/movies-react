@@ -7,11 +7,11 @@ import Footer from "../components/Footer.jsx";
 
 const Movies = ({ genre }) => {
   return (
-    <>
+    <body className="flex flex-col min-h-screen">
       <header>
         <Navbar />
       </header>
-      <main className="mx-auto max-w-xl mt-7">
+      <main className="mx-auto max-w-xl mt-7 flex-grow flex-shrink">
         <Title />
         <Search />
         <ListOfMovies genre={genre} />
@@ -20,7 +20,7 @@ const Movies = ({ genre }) => {
       <footer>
         <Footer />
       </footer>
-    </>
+    </body>
   );
 };
 
