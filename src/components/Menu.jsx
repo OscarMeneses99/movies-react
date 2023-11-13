@@ -17,6 +17,14 @@ function Menu({ isVisible }) {
       <ul className="space-y-5 text-left ml-6 text-xl font-mono">
         <li className="hover:scale-110 transition-all hover:text-teal-900">
           <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            All
+          </NavLink>
+        </li>
+        <li className="hover:scale-110 transition-all hover:text-teal-900">
+          <NavLink
             to="/genre/action"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
