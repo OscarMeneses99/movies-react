@@ -4,13 +4,19 @@ import SettingsIcon from "../assets/SettingsIcon.jsx";
 import DeviceIcon from "../assets/DeviceIcon.jsx";
 import MenuIcon from "../assets/MenuIcon.jsx";
 import Menu from "./Menu.jsx";
+import Settings from "./Settings.jsx";
 
 function Navbar() {
   const activeStyle = "bg-teal-500 text-white px-3 py-2 rounded-lg";
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisibleMenu, setIsVisibleMenu] = useState(false);
+  const [isVisibleSettings, setIsVisibleSettings] = useState(false);
 
-  const toggleVisibility = () => {
-    setIsVisible(!isVisible);
+  const toggleSettings = () => {
+    setIsVisibleSettings(!isVisibleSettings);
+  };
+
+  const toggleMenu = () => {
+    setIsVisibleMenu(!isVisibleMenu);
   };
   return (
     <>
@@ -98,17 +104,20 @@ function Navbar() {
           </li>
         </ul>
         <ul className="flex justify-center items-center content-center">
-          <li className="hidden lg:block">
-            <SettingsIcon />
+          <li className="hidden lg:block lg:ml-10 absolute right-3">
+            <button onClick={toggleSettings}>
+              <SettingsIcon />
+            </button>
           </li>
           <li className="block lg:hidden">
-            <button onClick={toggleVisibility}>
+            <button onClick={toggleMenu}>
               <MenuIcon />
             </button>
           </li>
         </ul>
       </nav>
-      <Menu isVisible={isVisible} />
+      <Settings isVisible={isVisibleSettings} />
+      <Menu isVisible={isVisibleMenu} />
     </>
   );
 }

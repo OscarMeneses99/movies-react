@@ -5,7 +5,9 @@ import { MovieProvider } from "./context/Context.jsx";
 import App from "./App.jsx";
 import MovieInfo from "./pages/MovieInfo.jsx";
 import NotFound from "./pages/NotFound.jsx";
-import Menu from "./components/Menu.jsx";
+import CreateMovie from "./pages/CreateMovie.jsx";
+import UpdateMovie from "./pages/UpdateMovie.jsx";
+import MyAccount from "./pages/MyAccount.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,12 +26,29 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "/NotFound",
-    element: <NotFound />,
+    path: "/add-movie",
+    element: <CreateMovie />,
+    errorElement: <NotFound />,
   },
   {
-    path: "/menu",
-    element: <Menu />,
+    path: "/edit-movie",
+    element: <UpdateMovie />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/create-movie",
+    element: <CreateMovie />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/my-account",
+    element: <MyAccount />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/*",
+    element: <NotFound />,
+    errorElement: <NotFound />,
   },
 ]);
 

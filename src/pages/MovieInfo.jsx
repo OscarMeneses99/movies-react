@@ -16,7 +16,7 @@ function MovieInfo() {
   const info = movies.find((movie) => movie._id === id);
 
   if (!info) {
-    navigate("/NotFound");
+    navigate("/*");
     return null;
   }
   return (
