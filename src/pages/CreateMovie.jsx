@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Arrow from "../assets/ChevronLeftIcon.jsx";
 const CreateMovie = () => {
   return (
-    <main className="mx-auto max-w-lg py-2">
+    <body className="mx-auto max-w-lg py-2">
       <div className="mx-1 max-w-lg">
         <header>
           <Link
@@ -18,7 +18,7 @@ const CreateMovie = () => {
 
         <form
           method="post"
-          className="space-y-5 rounded-lg p-4 shadow-xl text-left sm:p-6 lg:p-8"
+          className="space-y-5 rounded-lg p-4 shadow-xl text-left sm:p-4 lg:p-8"
         >
           <h1 className="font-black uppercase text-4xl md:text-5xl text-center py-5 px-4">
             Create movie
@@ -131,7 +131,7 @@ const CreateMovie = () => {
           </button>
         </form>
       </div>
-    </main>
+    </body>
   );
 };
 

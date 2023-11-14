@@ -99,10 +99,10 @@ function Menu({ isVisible }) {
 
       <ul className="mt-6 p-2">
         <li className="p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg">
-          <a href="/my-account">My Account</a>
+          <Link to="/my-account">My Account</Link>
         </li>
         <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg">
-          <a href="/*">Sign out</a>
+          <Link to="/*">Sign out</Link>
         </li>
       </ul>
     </div>
