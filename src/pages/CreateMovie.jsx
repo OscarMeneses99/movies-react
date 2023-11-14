@@ -29,7 +29,7 @@ const CreateMovie = () => {
             </label>
             <input
               type="text"
-              className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              className="w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
               placeholder="The Godfather"
             />
           </div>
@@ -43,7 +43,7 @@ const CreateMovie = () => {
                 type="number"
                 min="1900"
                 max="2025"
-                className="w-[140px] rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-[140px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="1975"
               />
             </div>
@@ -55,7 +55,7 @@ const CreateMovie = () => {
                 type="number"
                 min="1"
                 max="500"
-                className="w-[140px] rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-[140px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="175"
               />
             </div>
@@ -69,7 +69,7 @@ const CreateMovie = () => {
               type="text"
               min="1900"
               max="2025"
-              className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              className="w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
               placeholder="Francis Ford Coppola"
             />
           </div>
@@ -81,7 +81,7 @@ const CreateMovie = () => {
               </label>
               <input
                 type="text"
-                className="w-[180px] rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-[180px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="Action, Drama..."
               />
             </div>
@@ -94,7 +94,7 @@ const CreateMovie = () => {
                 step="0.1"
                 min="1"
                 max="10"
-                className="w-[90px] rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-[90px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
                 placeholder="9.3"
               />
             </div>
@@ -106,7 +106,7 @@ const CreateMovie = () => {
             </label>
             <input
               type="text"
-              className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              className="w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
               placeholder="https://img.fruugo.com/product/4/49/14441494_max.jpg"
             />
           </div>
@@ -117,7 +117,7 @@ const CreateMovie = () => {
             </label>
 
             <textarea
-              className="mt-2 w-full p-3 rounded-lg border-gray-200 align-top shadow-sm sm:text-sm"
+              className="mt-2 w-full p-3 rounded-lg border border-gray-200 shadow-sm sm:text-sm"
               rows="6"
               placeholder="The Godfather is a 1972 crime drama film that revolves around the Corleone Mafia family, led by Vito Corleone. It explores themes of power, family, and loyalty as his son Michael gets involved in the family's criminal activities after an assassination attempt on Vito. The movie is renowned for its storytelling, complex characters, and iconic performances."
             ></textarea>

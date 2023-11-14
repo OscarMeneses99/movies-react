@@ -18,7 +18,7 @@ const MyAccount = () => {
 
         <form
           method="post"
-          className="space-y-5 rounded-lg p-4 shadow-xl text-left sm:p-4 lg:p-8"
+          className="flex flex-col justify-center items-center space-y-5 rounded-lg p-4 shadow-xl text-left sm:p-4 lg:p-8"
         >
           <h1 className="font-black uppercase text-4xl md:text-5xl text-center py-5 px-4">
             My Account
@@ -30,7 +30,7 @@ const MyAccount = () => {
             </label>
             <input
               type="text"
-              className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              className="w-[250px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
               placeholder="Camila Yokoo"
             />
           </div>
@@ -40,7 +40,7 @@ const MyAccount = () => {
             </label>
             <input
               type="email"
-              className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              className="w-[250px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
               placeholder="camilayokoo@gmail.com"
             />
           </div>
@@ -50,7 +50,7 @@ const MyAccount = () => {
             </label>
             <input
               type="password"
-              className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              className="w-[250px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
               placeholder="*********"
             />
           </div>
