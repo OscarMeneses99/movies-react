@@ -1,6 +1,6 @@
 # Search for Information about Movies
 
-This is an application made in express where you can perform Create, Read, Update and Delete (CRUD) operations on movies.
+This is an application made in react where you can find information about movies.
 
 You can access the deployed application here: [App](https://movies-react-vite.netlify.app/)
 
