@@ -3,7 +3,7 @@ import { MovieContext } from "../context/Context.jsx";
 function Search() {
   const { searchByTitle, setSearchByTitle } = useContext(MovieContext);
   return (
-    <>
+    <section className="flex flex-col justify-center items-center place-content-center">
       <input
         type="text"
         name="title"
@@ -16,7 +16,7 @@ function Search() {
           Searches Found for <span className="font-bold">{searchByTitle}</span>
         </p>
       )}
-    </>
+    </section>
   );
 }
 

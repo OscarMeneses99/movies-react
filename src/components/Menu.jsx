@@ -3,14 +3,9 @@ function Menu({ isVisible }) {
   const activeStyle = "bg-teal-500 text-white px-3 py-2 rounded-lg";
   return (
     <div
-      className={`border-2 rounded-lg w-[220px] absolute top-[75px] right-1 m-2 bg-white z-10 
+      className={`border-2 rounded-lg w-[220px] absolute top-[50px] right-1 m-2 bg-white z-10 
       ${isVisible ? "" : "hidden"}`}
     >
-      <ul className="mt-3 p-2">
-        <li className="p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg">
-          <Link to="/add-movie">Add Movie</Link>
-        </li>
-      </ul>
       <h1 className="mb-4 ml-3 mt-3 font-mono font-semibold text-2xl text-left  text-teal-700">
         Genre
       </h1>
@@ -105,11 +100,14 @@ function Menu({ isVisible }) {
         </li>
       </ul>
 
-      <ul className="mt-6 p-2">
-        <li className="p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg">
+      <ul className="mt-5 p-2">
+        <li className="p-3 font-mono font-extrabold text-xl text-center bg-teal-700 text-white rounded-lg">
+          <Link to="/add-movie">Add Movie</Link>
+        </li>
+        <li className="mt-5 p-3 font-mono font-extrabold text-xl text-center bg-teal-700 text-white rounded-lg">
           <Link to="/my-account">My Account</Link>
         </li>
-        <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg">
+        <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl text-center bg-teal-700 text-white rounded-lg">
           <Link to="/*">Sign out</Link>
         </li>
       </ul>

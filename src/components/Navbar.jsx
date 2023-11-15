@@ -20,14 +20,22 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="flex justify-between items-center bg-white lg:justify-center lg:gap-14 font-mono font-semibold">
+      <nav className="flex justify-between items-center mt-2 bg-white lg:justify-center lg:gap-14 font-mono font-semibold">
         <ul
           className="flex flex-row justify-center
       content-center items-center gap-5"
         >
-          <li className="mr-3">
+          <li className="mr-3 ml-8">
             <NavLink to="/">
               <DeviceIcon />
+            </NavLink>
+          </li>
+          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              All
             </NavLink>
           </li>
           <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
@@ -117,7 +125,7 @@ function Navbar() {
               <SettingsIcon />
             </button>
           </li>
-          <li className="block lg:hidden">
+          <li className="block mr-8 lg:hidden">
             <button onClick={toggleMenu}>
               <MenuIcon />
             </button>
