@@ -6,14 +6,14 @@ const Settings = ({ isVisible }) => {
     ${isVisible ? "" : "hidden"}`}
     >
       <ul className="p-4">
-        <li className="p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg">
+        <li className="p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg hover:scale-105 hover:bg-teal-600 transition-all">
           <Link to="/add-movie">Add Movie</Link>
         </li>
 
-        <li className="mt-5 p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg">
+        <li className="mt-5 p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg hover:scale-105 hover:bg-teal-600 transition-all">
           <Link to="/my-account">My Account</Link>
         </li>
-        <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg">
+        <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl bg-teal-700 text-white rounded-lg hover:scale-105 hover:bg-teal-600 transition-all">
           <Link to="/*">Sign out</Link>
         </li>
       </ul>

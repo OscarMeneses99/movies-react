@@ -64,6 +64,14 @@ function Navbar() {
           </li>
           <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
             <NavLink
+              to="/genre/comedy"
+              className={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Comedy
+            </NavLink>
+          </li>
+          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+            <NavLink
               to="/genre/crime"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
