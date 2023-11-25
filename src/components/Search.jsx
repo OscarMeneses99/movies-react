@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MovieContext } from "../context/Context.jsx";
-function Search() {
+function Search({ genre }) {
   const { searchByTitle, setSearchByTitle } = useContext(MovieContext);
   return (
     <section className="flex flex-col justify-center items-center place-content-center">
@@ -13,7 +13,12 @@ function Search() {
       />
       {searchByTitle && (
         <p className="text-center text-2xl mb-4">
-          Searches Found for <span className="font-bold">{searchByTitle}</span>
+          Results for <span className="font-bold">{searchByTitle}</span>
+        </p>
+      )}
+      {genre && (
+        <p className="text-center text-2xl mb-4">
+          Results for <span className="font-bold">{genre}</span>
         </p>
       )}
     </section>

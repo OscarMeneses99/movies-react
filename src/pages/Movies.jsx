@@ -13,7 +13,7 @@ const Movies = ({ genre }) => {
       </header>
       <main className="mx-auto max-w-xl mt-7 flex-grow flex-shrink">
         <Title />
-        <Search />
+        <Search genre={genre} />
         <ListOfMovies genre={genre} />
         <Outlet />
       </main>
