@@ -19,6 +19,15 @@ function MovieInfo() {
     navigate("/");
     return null;
   }
+
+  const colors = [
+    "bg-orange-500",
+    "bg-pink-600",
+    "bg-green-500",
+    "bg-purple-500",
+    "bg-red-600",
+    "bg-indigo-500",
+  ];
   return (
     <>
       <header>
@@ -66,17 +75,21 @@ function MovieInfo() {
               <span className="text-lg font-mono">{info.duration} mins</span>
             </li>
 
-            <ul>
-              <span className="text-xl text-teal-700">Genre: </span>
-              {info.genre.map((genre, index) => (
-                <li
-                  key={index}
-                  className="text-lg text-gray-700 font-mono list-none px-4"
-                >
-                  {genre}
-                </li>
-              ))}
-            </ul>
+            <li className="flex items-center">
+              <span className="text-xl text-teal-700 mr-2">Genre: </span>
+              <div className="flex gap-2">
+                {info.genre.map((genre, index) => (
+                  <span
+                    key={index}
+                    className={`text-lg text-white rounded-xl font-mono list-none px-4 ${
+                      colors[index % colors.length]
+                    }`}
+                  >
+                    {genre}
+                  </span>
+                ))}
+              </div>
+            </li>
 
             <li>
               <span className="text-xl text-teal-700">Rate: </span>
