@@ -30,7 +30,7 @@ function MovieInfo() {
   ];
   return (
     <>
-      <header>
+      <header className="mt-5">
         <Link
           to="/"
           className="flex place-content-center items-center mb-5 transition-all hover:text-teal-800 hover:scale-105"
@@ -75,13 +75,13 @@ function MovieInfo() {
               <span className="text-lg font-mono">{info.duration} mins</span>
             </li>
 
-            <li className="flex items-center">
+            <li className="items-center">
               <span className="text-xl text-teal-700 mr-2">Genre: </span>
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 {info.genre.map((genre, index) => (
                   <span
                     key={index}
-                    className={`text-lg text-white rounded-xl font-mono list-none px-4 ${
+                    className={`text-lg text-white rounded-xl font-mono list-none text-center py-1 px-2 ${
                       colors[index % colors.length]
                     }`}
                   >
