@@ -16,7 +16,7 @@ function MovieInfo() {
   const info = movies.find((movie) => movie._id === id);
 
   if (!info) {
-    navigate("/*");
+    navigate("/");
     return null;
   }
   return (
@@ -34,7 +34,7 @@ function MovieInfo() {
         <picture className="w-full gap-5">
           <div className="flex mb-3 gap-2">
             <ButtonDelete id={info._id} />
-            <ButtonModify />
+            <ButtonModify id={info._id} />
           </div>
           <img
             className="aspect-[520/804] object-cover rounded"

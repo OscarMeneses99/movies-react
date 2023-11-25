@@ -7,7 +7,7 @@ import Footer from "../components/Footer.jsx";
 
 const Movies = ({ genre }) => {
   return (
-    <body className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <header>
         <Navbar />
       </header>
@@ -20,7 +20,7 @@ const Movies = ({ genre }) => {
       <footer>
         <Footer />
       </footer>
-    </body>
+    </div>
   );
 };
 

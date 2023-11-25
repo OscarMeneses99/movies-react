@@ -31,7 +31,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "/edit-movie",
+    path: "/update/:id",
     element: <UpdateMovie />,
     errorElement: <NotFound />,
   },

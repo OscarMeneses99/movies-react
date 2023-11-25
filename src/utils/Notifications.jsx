@@ -1,8 +1,8 @@
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export function ToastMovieDeleted() {
-  const notify = toast.success("Movie deleted", {
+export function ToastMovieCreated() {
+  const notify = toast.success("Movie created", {
     position: "top-center",
     autoClose: 1000,
     hideProgressBar: true,
@@ -15,8 +15,50 @@ export function ToastMovieDeleted() {
   return { notify };
 }
 
+export function ToastMovieNotCreated() {
+  const notify = toast.error("Movie not created", {
+    position: "top-center",
+    autoClose: 1000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+  return { notify };
+}
+
 export function ToastMovieUpdated() {
   const notify = toast.success("Movie updated", {
+    position: "top-center",
+    autoClose: 1000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+  return { notify };
+}
+
+export function ToastMovieNotUpdated() {
+  const notify = toast.error("Movie not updated", {
+    position: "top-center",
+    autoClose: 1000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+  return { notify };
+}
+
+export function ToastMovieDeleted() {
+  const notify = toast.success("Movie deleted", {
     position: "top-center",
     autoClose: 1000,
     hideProgressBar: true,

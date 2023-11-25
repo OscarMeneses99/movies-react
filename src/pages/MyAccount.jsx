@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Arrow from "../assets/ChevronLeftIcon.jsx";
 const MyAccount = () => {
   return (
-    <body className="mx-auto max-w-lg py-2">
+    <div className="mx-auto max-w-lg py-2">
       <div className="mx-1 max-w-lg">
         <header>
           <Link
@@ -62,7 +62,7 @@ const MyAccount = () => {
           </button>
         </form>
       </div>
-    </body>
+    </div>
   );
 };
 
