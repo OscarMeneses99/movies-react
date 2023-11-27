@@ -121,7 +121,8 @@ function Navbar() {
         </ul>
         <ul className="flex justify-center items-center content-center">
           <li className="hidden lg:block lg:ml-10 absolute right-3">
-            <button onClick={toggleSettings}>
+            <button onClick={toggleSettings}
+            className="transition-all hover:scale-105">
               <SettingsIcon />
             </button>
           </li>

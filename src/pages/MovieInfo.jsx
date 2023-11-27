@@ -16,7 +16,7 @@ function MovieInfo() {
   const info = movies.find((movie) => movie._id === id);
 
   if (!info) {
-    navigate("/");
+    navigate("/*");
     return null;
   }
 
@@ -29,7 +29,7 @@ function MovieInfo() {
     "bg-indigo-500",
   ];
   return (
-    <>
+    <div className="min-h-screen">
       <header className="mt-5">
         <Link
           to="/"
@@ -39,7 +39,7 @@ function MovieInfo() {
           <h2 className="font-mono font-extrabold text-3xl">Home Page</h2>
         </Link>
       </header>
-      <main className="grid grid-cols-1 justify-center mx-auto max-w-xl md:grid-cols-[350px_1fr] gap-3 px-8 mb-10">
+      <main className="grid grid-cols-1 justify-center mx-auto max-w-xl md:grid-cols-[350px_1fr] gap-3 px-8 mb-10 flex-grow flex-shrink">
         <picture className="w-full gap-5">
           <div className="flex mb-3 gap-2">
             <ButtonDelete id={info._id} />
@@ -101,7 +101,7 @@ function MovieInfo() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

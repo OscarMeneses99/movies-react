@@ -84,3 +84,31 @@ export function ToastMovieNotFound() {
   });
   return { notify };
 }
+
+export function ToastUserCreated() {
+  const notify = toast.success("User created", {
+    position: "top-center",
+    autoClose: 1000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+  return { notify };
+}
+
+export function ToastUserNotCreated() {
+  const notify = toast.error("User not created", {
+    position: "top-center",
+    autoClose: 1000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+  return { notify };
+}

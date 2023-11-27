@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound.jsx";
 import CreateMovie from "./pages/CreateMovie.jsx";
 import UpdateMovie from "./pages/UpdateMovie.jsx";
 import MyAccount from "./pages/MyAccount.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,16 @@ const router = createBrowserRouter([
   {
     path: "/my-account",
     element: <MyAccount />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
     errorElement: <NotFound />,
   },
   {
