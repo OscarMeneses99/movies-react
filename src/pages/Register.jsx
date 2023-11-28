@@ -47,9 +47,9 @@ const Register = () => {
         alt="background"
         className="absolute object-cover aspect-[2000/1125] w-[100%] h-[100%] z-0 opacity-60"
       />
-      <main className="mx-auto max-w-lg flex flex-col justify-center items-center flex-wrap flex-grow mt-5 lg:mt-0 z-10">
+      <main className="mx-auto max-w-lg flex flex-col justify-center items-center flex-wrap flex-grow mt-10 mb-5 z-10">
         <form
-          className="relative flex flex-col justify-center items-center rounded-xl py-5 px-10 bg-[#202020]"
+          className="relative flex flex-col justify-center items-center rounded-xl p-10 bg-[#202020]"
           onSubmit={onSubmit}
         >
           <Link to="/">
@@ -139,7 +139,7 @@ const Register = () => {
             )}
           </div>
 
-          <button className="bg-rose-500 w-[300px] p-4 mt-4 mb-1 rounded-md text-white font-bold hover:bg-rose-600">
+          <button className="bg-rose-500 w-[300px] p-4 mt-4 mb-6 rounded-md text-white font-bold hover:bg-rose-600">
             Create
           </button>
           <div className="flex justify-end items-center">
