@@ -102,13 +102,13 @@ function Menu({ isVisible }) {
       </ul>
 
       <ul className="mt-5 p-2">
-        <li className="p-3 font-mono font-extrabold text-xl text-center bg-orange-600 text-white rounded-lg">
+        <li className="p-3 font-mono font-extrabold text-xl text-center bg-rose-600 text-white rounded-lg">
           <Link to="/add-movie">Add Movie</Link>
         </li>
-        <li className="mt-5 p-3 font-mono font-extrabold text-xl text-center bg-orange-600 text-white rounded-lg">
+        <li className="mt-5 p-3 font-mono font-extrabold text-xl text-center bg-rose-600 text-white rounded-lg">
           <Link to="/my-account">My Account</Link>
         </li>
-        <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl text-center bg-orange-600 text-white rounded-lg">
+        <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl text-center bg-rose-600 text-white rounded-lg">
           <Link to="/*">Sign out</Link>
         </li>
       </ul>

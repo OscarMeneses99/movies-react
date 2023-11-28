@@ -62,7 +62,7 @@ const Register = () => {
           <div>
             <input
               type="text"
-              className="mt-1 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
+              className="mt-1 w-[300px] p-4 rounded-lg bg-[#303030] focus:outline-none "
               placeholder="Full Name"
               {...register("name", {
                 required: "This field is required",
@@ -84,7 +84,7 @@ const Register = () => {
           <div>
             <input
               type="text"
-              className="mt-4 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
+              className="mt-4 w-[300px] p-4 rounded-lg bg-[#303030] focus:outline-none "
               placeholder="Username"
               {...register("username", {
                 required: "This field is required",
@@ -106,7 +106,7 @@ const Register = () => {
           <div>
             <input
               type="text"
-              className="mt-4 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
+              className="mt-4 w-[300px] p-4 rounded-lg bg-[#303030] focus:outline-none "
               placeholder="Email"
               {...register("email", {
                 required: "This field is required",
@@ -125,7 +125,7 @@ const Register = () => {
             <input
               type="password"
               placeholder="Password"
-              className="mt-4 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none"
+              className="mt-4 w-[300px] p-4 rounded-lg bg-[#303030] focus:outline-none"
               {...register("password", {
                 required: "This field is required",
                 minLength: {

@@ -8,7 +8,7 @@ function Login() {
         alt="background"
         className="absolute object-cover aspect-[2000/1125] w-[100%] h-[100%] z-0 opacity-60 "
       />
-      <main className="mx-auto max-w-lg flex flex-col justify-center items-center flex-grow mt-10 z-10">
+      <main className="mx-auto max-w-lg flex flex-col justify-center items-center flex-wrap flex-grow mt-10 z-10">
         <form className="relative flex flex-col justify-center items-center rounded-xl p-10 bg-[#202020]">
           <Link to="/">
             <ArrowLeft />
@@ -16,13 +16,13 @@ function Login() {
           <img src="/Cinema.png" alt="title" className="object-cover" />
           <input
             type="text"
-            className="mt-5 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
+            className="mt-5 w-[300px] p-4 rounded-lg bg-[#303030] focus:outline-none "
             placeholder="Username"
           />
           <input
             type="password"
             placeholder="Password"
-            className="mt-3 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none"
+            className="mt-3 w-[300px] p-4 rounded-lg bg-[#303030] focus:outline-none"
           />
           <button className="bg-rose-500 w-[300px] p-4 mt-7 mb-3 rounded-md text-white font-bold hover:bg-rose-600">
             Login

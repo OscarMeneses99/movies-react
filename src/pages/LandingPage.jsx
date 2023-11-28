@@ -8,7 +8,7 @@ const LandingPage = () => {
         alt="background"
         className="absolute object-cover aspect-[2000/1125] w-[100%] h-[100%] z-0 opacity-60 "
       />
-      <div className="z-10 flex justify-between items-center w-full p-4 absolute top-0 flex-wrap">
+      <div className="z-10 flex justify-center gap-10 md:justify-between items-center w-full p-4 absolute top-0 flex-wrap">
         <img src="/Cinema.png" alt="title" className="w-[180px]" />
         <div>
           <Link
