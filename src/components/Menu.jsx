@@ -1,24 +1,25 @@
 import { Link, NavLink } from "react-router-dom";
 function Menu({ isVisible }) {
-  const activeStyle = "bg-teal-500 text-white px-3 py-2 rounded-lg";
+  const activeStyle = "bg-rose-500 text-white px-3 py-2 rounded-lg";
+  const styleLink = "hover:scale-110 transition-all hover:text-rose-400";
   return (
     <div
-      className={`border-2 rounded-lg w-[220px] absolute top-[50px] right-1 m-2 bg-white z-10 
+      className={`rounded-lg w-[220px] absolute top-[50px] right-1 m-2 bg-[#303030] z-10 
       ${isVisible ? "" : "hidden"}`}
     >
-      <h1 className="mb-4 ml-3 mt-3 font-mono font-semibold text-2xl text-left  text-teal-700">
+      <h1 className="mb-4 ml-3 mt-3 font-mono font-semibold text-2xl text-left  text-white">
         Genre
       </h1>
       <ul className="space-y-5 text-left ml-6 text-xl font-mono">
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             All
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/action"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -26,7 +27,7 @@ function Menu({ isVisible }) {
             Action
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/adventure"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -34,7 +35,7 @@ function Menu({ isVisible }) {
             Adventure
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/animation"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -42,7 +43,7 @@ function Menu({ isVisible }) {
             Animation
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/biography"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -50,7 +51,7 @@ function Menu({ isVisible }) {
             Biography
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/comedy"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -58,7 +59,7 @@ function Menu({ isVisible }) {
             Comedy
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/crime"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -66,7 +67,7 @@ function Menu({ isVisible }) {
             Crime
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/drama"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -74,7 +75,7 @@ function Menu({ isVisible }) {
             Drama
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/fantasy"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -82,7 +83,7 @@ function Menu({ isVisible }) {
             Fantasy
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/romance"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -90,7 +91,7 @@ function Menu({ isVisible }) {
             Romance
           </NavLink>
         </li>
-        <li className="hover:scale-110 transition-all hover:text-teal-900">
+        <li className={`${styleLink}`}>
           <NavLink
             to="/genre/sci-fi"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -101,13 +102,13 @@ function Menu({ isVisible }) {
       </ul>
 
       <ul className="mt-5 p-2">
-        <li className="p-3 font-mono font-extrabold text-xl text-center bg-teal-700 text-white rounded-lg">
+        <li className="p-3 font-mono font-extrabold text-xl text-center bg-orange-600 text-white rounded-lg">
           <Link to="/add-movie">Add Movie</Link>
         </li>
-        <li className="mt-5 p-3 font-mono font-extrabold text-xl text-center bg-teal-700 text-white rounded-lg">
+        <li className="mt-5 p-3 font-mono font-extrabold text-xl text-center bg-orange-600 text-white rounded-lg">
           <Link to="/my-account">My Account</Link>
         </li>
-        <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl text-center bg-teal-700 text-white rounded-lg">
+        <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl text-center bg-orange-600 text-white rounded-lg">
           <Link to="/*">Sign out</Link>
         </li>
       </ul>

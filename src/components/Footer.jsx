@@ -1,13 +1,10 @@
-import DeviceIcon from "../assets/DeviceIcon.jsx";
 function Footer() {
   return (
-    <footer
-      className="bg-white text-gray-600"
-    >
+    <footer >
       <div className="mx-auto max-w-full px-4 py-8 sm:px-6 lg:px-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex justify-center sm:justify-start">
-            <DeviceIcon />
+            <img src="/Cinema.png" alt="cinema" className="w-[100px]" />
           </div>
 
           <div className="flex flex-col md:flex-row">

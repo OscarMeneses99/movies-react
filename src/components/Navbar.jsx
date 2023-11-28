@@ -1,13 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import SettingsIcon from "../assets/SettingsIcon.jsx";
-import DeviceIcon from "../assets/DeviceIcon.jsx";
 import MenuIcon from "../assets/MenuIcon.jsx";
 import Menu from "./Menu.jsx";
 import Settings from "./Settings.jsx";
 
 function Navbar() {
-  const activeStyle = "bg-teal-500 text-white px-3 py-2 rounded-lg";
+  const activeStyle = "bg-rose-500 text-white px-3 py-2 rounded-lg";
+  const styleLink =
+    "hidden lg:block hover:scale-110 transition-all hover:text-rose-400";
   const [isVisibleMenu, setIsVisibleMenu] = useState(false);
   const [isVisibleSettings, setIsVisibleSettings] = useState(false);
 
@@ -20,25 +21,25 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="flex justify-between items-center mt-2 bg-white lg:justify-center lg:gap-14 font-mono font-semibold">
+      <nav className="flex justify-between items-center mt-2 lg:justify-center lg:gap-14 font-mono font-semibold">
         <ul
           className="flex flex-row justify-center
       content-center items-center gap-5"
         >
           <li className="mr-3 ml-8">
-            <NavLink to="/">
-              <DeviceIcon />
+            <NavLink to="/home">
+              <img src="/Cinema.png" alt="cinema" className="w-[100px]" />
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
-              to="/"
+              to="/home"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               All
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/action"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -46,7 +47,7 @@ function Navbar() {
               Action
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/adventure"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -54,7 +55,7 @@ function Navbar() {
               Adventure
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/animation"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -62,7 +63,7 @@ function Navbar() {
               Animation
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/biography"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -70,7 +71,7 @@ function Navbar() {
               Biography
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/comedy"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -78,7 +79,7 @@ function Navbar() {
               Comedy
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/crime"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -86,7 +87,7 @@ function Navbar() {
               Crime
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/drama"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -94,7 +95,7 @@ function Navbar() {
               Drama
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/fantasy"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -102,7 +103,7 @@ function Navbar() {
               Fantasy
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/romance"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -110,7 +111,7 @@ function Navbar() {
               Romance
             </NavLink>
           </li>
-          <li className="hidden lg:block hover:scale-110 transition-all hover:text-teal-900">
+          <li className={`${styleLink}`}>
             <NavLink
               to="/genre/sci-fi"
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -121,8 +122,10 @@ function Navbar() {
         </ul>
         <ul className="flex justify-center items-center content-center">
           <li className="hidden lg:block lg:ml-10 absolute right-3">
-            <button onClick={toggleSettings}
-            className="transition-all hover:scale-105">
+            <button
+              onClick={toggleSettings}
+              className="transition-all hover:scale-105"
+            >
               <SettingsIcon />
             </button>
           </li>

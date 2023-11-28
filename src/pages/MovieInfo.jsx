@@ -28,22 +28,24 @@ function MovieInfo() {
     "bg-red-600",
     "bg-indigo-500",
   ];
+
+  const styleText = "text-xl text-cyan-500";
   return (
     <div className="min-h-screen">
       <header className="mt-5">
         <Link
-          to="/"
-          className="flex place-content-center items-center mb-5 transition-all hover:text-teal-800 hover:scale-105"
+          to="/home"
+          className="flex place-content-center items-center mb-5 transition-all hover:text-rose-500 hover:scale-105"
         >
           <ChevronIcon />
           <h2 className="font-mono font-extrabold text-3xl">Home Page</h2>
         </Link>
       </header>
-      <main className="grid grid-cols-1 justify-center mx-auto max-w-xl md:grid-cols-[350px_1fr] gap-3 px-8 mb-10 flex-grow flex-shrink">
+      <main className="grid grid-cols-1 justify-center mx-auto max-w-lg md:grid-cols-[350px_1fr] gap-3 px-8 mb-10 flex-grow flex-shrink">
         <picture className="w-full gap-5">
           <div className="flex mb-3 gap-2">
-            <ButtonDelete id={info._id} />
             <ButtonModify id={info._id} />
+            <ButtonDelete id={info._id} />
           </div>
           <img
             className="aspect-[520/804] object-cover rounded"
@@ -54,29 +56,29 @@ function MovieInfo() {
 
         <aside className="flex flex-col items-center md:w-[500px] md:mt-10 p-2">
           <ul className="text-left">
-            <span className="text-2xl font-bold text-teal-800 justify-center flex md:block">
+            <span className="text-2xl font-bold text-cyan-600 justify-center flex md:block">
               {info.title}
             </span>
             <li>
-              <span className="text-xl text-teal-700">Synopsis: </span>
+              <span className={`${styleText}`}>Synopsis: </span>
               <span className="text-lg font-mono">{info.synopsis}</span>
             </li>
             <li>
-              <span className="text-xl text-teal-700">Director: </span>
+              <span className={`${styleText}`}>Director: </span>
               <span className="text-lg font-mono">{info.director}</span>
             </li>
             <li>
-              <span className="text-xl text-teal-700">Year: </span>
+              <span className={`${styleText}`}>Year: </span>
               <span className="text-lg font-mono">{info.year}</span>
             </li>
 
             <li>
-              <span className="text-xl text-teal-700"> Duration: </span>
+              <span className={`${styleText}`}> Duration: </span>
               <span className="text-lg font-mono">{info.duration} mins</span>
             </li>
 
             <li className="items-center">
-              <span className="text-xl text-teal-700 mr-2">Genre: </span>
+              <span className={`${styleText}`}>Genre: </span>
               <div className="flex gap-2 items-center">
                 {info.genre.map((genre, index) => (
                   <span
@@ -92,15 +94,12 @@ function MovieInfo() {
             </li>
 
             <li>
-              <span className="text-xl text-teal-700">Rate: </span>
+              <span className={`${styleText}`}>Rate: </span>
               <span className="text-lg font-mono">{info.rate}</span>
             </li>
           </ul>
         </aside>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }

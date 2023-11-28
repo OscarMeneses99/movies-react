@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MagicMotion } from "react-magic-motion";
-import CardMovie from "../components/CardMovie.jsx";
+import CardMovie from "./CardMovie.jsx";
 import { MovieContext } from "../context/Context.jsx";
 
 function ListOfMovies({ genre }) {
@@ -27,7 +27,7 @@ function ListOfMovies({ genre }) {
             </figure>
           ))
         ) : (
-          <p className="absolute mt-[100px] text-xl font-light text-gray-500/70 italic">
+          <p className="absolute mt-[100px] text-xl font-light text-white/70 italic">
             No Movies Found
           </p>
         )}

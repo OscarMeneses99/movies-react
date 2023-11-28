@@ -1,7 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { ToastUserCreated, ToastUserNotCreated } from "../utils/Notifications";
+import {
+  ToastUserCreated,
+  ToastUserNotCreated,
+} from "../utils/Notifications.jsx";
+import ArrowLeft from "../assets/ArrowLeft.jsx";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -32,30 +35,34 @@ const Register = () => {
       })
       .finally(() => {
         ToastUserCreated();
-        navigate("/");
+        navigate("/home");
       });
   });
 
   const errorsStyle = "text-rose-800 text-sm font-mono font-bold mt-1";
   return (
-    <div className="flex flex-col min-h-screen bg-teal-900">
-      <main className="mx-auto max-w-lg flex-grow flex-shrink mt-10">
+    <div className="relative flex flex-col min-h-screen w-[100%] bg-black">
+      <img
+        src="https://assets.nflxext.com/ffe/siteui/vlv3/d1532433-07b1-4e39-a920-0f08b81a489e/3d9a18e1-6755-4fe5-a73c-580bcf7a48b3/MX-es-20231120-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+        alt="background"
+        className="absolute object-cover aspect-[2000/1125] w-[100%] h-[100%] z-0 opacity-60"
+      />
+      <main className="mx-auto max-w-lg flex flex-col justify-center items-center flex-wrap flex-grow mt-5 lg:mt-0 z-10">
         <form
-          className="flex flex-col justify-center items-center rounded-xl p-10 mb-10 bg-teal-700"
+          className="relative flex flex-col justify-center items-center rounded-xl py-5 px-10 bg-[#202020]"
           onSubmit={onSubmit}
         >
-          <img
-            src="https://as2.ftcdn.net/v2/jpg/02/01/19/07/1000_F_201190712_1fxYTqiaQLEo8rUAimPp8yASSpMv7zRy.jpg"
-            alt="cinema"
-            className="object-cover w-1/2 rounded-lg"
-          />
-          <h1 className="text-3xl font-bold font-mono uppercase text-white mt-5">
+          <Link to="/">
+            <ArrowLeft />
+          </Link>
+          <img src="/Cinema.png" alt="title" className="object-cover" />
+          <h1 className="text-3xl font-bold font-mono uppercase text-white mt-1">
             My Account
           </h1>
           <div>
             <input
               type="text"
-              className="mt-5 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
+              className="mt-1 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
               placeholder="Full Name"
               {...register("name", {
                 required: "This field is required",
@@ -77,7 +84,7 @@ const Register = () => {
           <div>
             <input
               type="text"
-              className="mt-5 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
+              className="mt-4 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
               placeholder="Username"
               {...register("username", {
                 required: "This field is required",
@@ -99,7 +106,7 @@ const Register = () => {
           <div>
             <input
               type="text"
-              className="mt-5 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
+              className="mt-4 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none "
               placeholder="Email"
               {...register("email", {
                 required: "This field is required",
@@ -118,7 +125,7 @@ const Register = () => {
             <input
               type="password"
               placeholder="Password"
-              className="mt-5 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none"
+              className="mt-4 w-[300px] p-4 rounded-lg border-black bg-white focus:outline-none"
               {...register("password", {
                 required: "This field is required",
                 minLength: {
@@ -132,10 +139,10 @@ const Register = () => {
             )}
           </div>
 
-          <button className="bg-teal-500 w-[300px] p-4 mt-7 mb-3 rounded-md text-white font-bold hover:bg-teal-600">
+          <button className="bg-rose-500 w-[300px] p-4 mt-4 mb-1 rounded-md text-white font-bold hover:bg-rose-600">
             Create
           </button>
-          <div className="flex justify-end items-center mt-3">
+          <div className="flex justify-end items-center">
             <p className="text-md font-mono font-bold text-white">
               Already have an account?
             </p>

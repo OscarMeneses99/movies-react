@@ -2,7 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useContext } from "react";
 import { MovieContext } from "../context/Context.jsx";
-import Arrow from "../assets/ChevronLeftIcon.jsx";
+import ArrowLeft from "../assets/ArrowLeft.jsx";
+
 import {
   ToastMovieCreated,
   ToastMovieNotCreated,
@@ -46,39 +47,33 @@ const CreateMovie = () => {
       .finally(() => {
         ToastMovieCreated();
         MovieChange();
-        navigate("/");
+        navigate("/home");
       });
   });
   return (
-    <div className="mx-auto max-w-lg py-2">
-      <div className="mx-1 max-w-lg">
-        <header>
-          <Link
-            to="/"
-            className="flex place-items-center justify-center items-center transition-all hover:text-teal-700 hover:scale-105"
-          >
-            <Arrow />
-            <h1 className="font-black uppercase text-4xl md:text-5xl text-center py-5 px-4">
-              Back
-            </h1>
-          </Link>
-        </header>
-
+    <div className="relative flex justify-center items-center min-h-screen">
+      <img
+        src="https://assets.nflxext.com/ffe/siteui/vlv3/d1532433-07b1-4e39-a920-0f08b81a489e/3d9a18e1-6755-4fe5-a73c-580bcf7a48b3/MX-es-20231120-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+        alt="background"
+        className="absolute object-cover aspect-[2000/1125] w-[100%] h-[100%] z-0 opacity-60 "
+      />
+      <div className="flex justify-center items-center z-10 mt-5 mb-5 bg-[#202020]">
         <form
           method="post"
-          className="space-y-5 rounded-lg p-4 shadow-xl text-left sm:p-4 lg:p-8"
+          className="relative z-10 bg-[#202020] space-y-5 rounded-lg p-4 shadow-xl text-left sm:p-4 lg:p-8"
           onSubmit={onSubmit}
         >
+          <Link to="/home">
+            <ArrowLeft />
+          </Link>
           <h1 className="font-black uppercase text-4xl md:text-5xl text-center py-5 px-4">
             Create movie
           </h1>
           <div>
-            <label className="block text-md font-mono text-teal-700">
-              Title
-            </label>
+            <label className="block text-md font-mono">Title</label>
             <input
               type="text"
-              className="w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              className="w-full rounded-lg bg-[#303030] p-4 pe-12 text-sm shadow-sm"
               placeholder="The Godfather"
               {...register("title")}
             />
@@ -89,14 +84,12 @@ const CreateMovie = () => {
 
           <div className="flex justify-around">
             <div>
-              <label className="block text-md font-mono text-teal-700">
-                Year
-              </label>
+              <label className="block text-md font-mono">Year</label>
               <input
                 type="number"
                 min="1900"
                 max="2025"
-                className="w-[140px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-[140px] rounded-lg bg-[#303030] p-4 pe-12 text-sm shadow-sm"
                 placeholder="1975"
                 {...register("year", { valueAsNumber: true })}
               />
@@ -107,14 +100,12 @@ const CreateMovie = () => {
               )}
             </div>
             <div>
-              <label className="block text-md font-mono text-teal-700">
-                Duration
-              </label>
+              <label className="block text-md font-mono ">Duration</label>
               <input
                 type="number"
                 min="1"
                 max="500"
-                className="w-[140px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-[140px] rounded-lg bg-[#303030] p-4 pe-12 text-sm shadow-sm"
                 placeholder="175"
                 {...register("duration", { valueAsNumber: true })}
               />
@@ -127,12 +118,10 @@ const CreateMovie = () => {
           </div>
 
           <div>
-            <label className="block text-md font-mono text-teal-700">
-              Director
-            </label>
+            <label className="block text-md font-mono ">Director</label>
             <input
               type="text"
-              className="w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              className="w-full rounded-lg bg-[#303030] p-4 pe-12 text-sm shadow-sm"
               placeholder="Francis Ford Coppola"
               {...register("director")}
             />
@@ -145,12 +134,12 @@ const CreateMovie = () => {
 
           <div className="flex justify-around">
             <div>
-              <label className="block text-md font-mono text-teal-700">
+              <label className="block text-md font-mono ">
                 Genre (comma separated)
               </label>
               <input
                 type="text"
-                className="w-[180px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-[180px] rounded-lg bg-[#303030] p-4 pe-12 text-sm shadow-sm"
                 placeholder="Action, Drama..."
                 {...register("genre")}
               />
@@ -161,15 +150,13 @@ const CreateMovie = () => {
               )}
             </div>
             <div>
-              <label className="block text-md font-mono text-teal-700">
-                Rate
-              </label>
+              <label className="block text-md font-mono ">Rate</label>
               <input
                 type="number"
                 step="0.1"
                 min="1"
                 max="10"
-                className="w-[100px] rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                className="w-[100px] rounded-lg bg-[#303030] p-4 pe-12 text-sm shadow-sm"
                 placeholder="9.3"
                 {...register("rate", { valueAsNumber: true })}
               />
@@ -182,12 +169,10 @@ const CreateMovie = () => {
           </div>
 
           <div>
-            <label className="block text-md font-mono text-teal-700">
-              Poster
-            </label>
+            <label className="block text-md font-mono ">Poster</label>
             <input
               type="text"
-              className="w-full rounded-lg border border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              className="w-full rounded-lg bg-[#303030] p-4 pe-12 text-sm shadow-sm"
               placeholder="https://img.fruugo.com/product/4/49/14441494_max.jpg"
               {...register("poster")}
             />
@@ -199,13 +184,11 @@ const CreateMovie = () => {
           </div>
 
           <div>
-            <label className="block text-md font-mono text-teal-700">
-              Synopsis
-            </label>
+            <label className="block text-md font-mono">Synopsis</label>
 
             <textarea
-              className="mt-2 w-full p-3 rounded-lg border border-gray-200 shadow-sm sm:text-sm"
-              rows="6"
+              className="mt-2 w-full p-3 rounded-lg bg-[#303030] shadow-sm sm:text-sm"
+              rows="7"
               placeholder="The Godfather is a 1972 crime drama film that revolves around the Corleone Mafia family, led by Vito Corleone. It explores themes of power, family, and loyalty as his son Michael gets involved in the family's criminal activities after an assassination attempt on Vito. The movie is renowned for its storytelling, complex characters, and iconic performances."
               {...register("synopsis")}
             />
@@ -218,7 +201,7 @@ const CreateMovie = () => {
 
           <button
             type="submit"
-            className="block w-full rounded-lg bg-teal-600 hover:bg-teal-700 px-5 py-3 text-sm font-medium text-white"
+            className="block w-full rounded-lg bg-rose-600 hover:bg-rose-700 px-5 py-3 text-sm font-medium text-white"
           >
             Create
           </button>

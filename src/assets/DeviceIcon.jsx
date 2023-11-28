@@ -2,7 +2,7 @@ function DeviceIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="icon icon-tabler icon-tabler-device-tv text-teal-700"
+      className="icon icon-tabler icon-tabler-device-tv text-white"
       width="50"
       height="50"
       viewBox="0 0 24 24"

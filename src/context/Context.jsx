@@ -6,6 +6,8 @@ export const MovieProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [searchByTitle, setSearchByTitle] = useState("");
 
+  const hasCookie = 1;
+
   function fetchMovies() {
     fetch("https://movies-backend.3.us-1.fl0.io/api/movies")
       .then((res) => res.json())
@@ -24,6 +26,7 @@ export const MovieProvider = ({ children }) => {
         searchByTitle,
         setSearchByTitle,
         fetchMovies,
+        hasCookie,
       }}
     >
       {children}

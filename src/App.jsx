@@ -2,14 +2,14 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import { useParams } from "react-router-dom";
-import Movies from "./pages/Movies";
+import Home from "./pages/Home.jsx";
 
 function App() {
   const { genre } = useParams();
   return (
     <>
       <ToastContainer />
-      <Movies genre={genre} />
+      <Home genre={genre} />
     </>
   );
 }

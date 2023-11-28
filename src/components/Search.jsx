@@ -8,7 +8,7 @@ function Search({ genre }) {
         type="text"
         name="title"
         placeholder="Search for a movie..."
-        className="mb-10 p-3 w-[250px] border-2 border-teal-500 rounded-lg focus:outline-none focus:border-teal-500"
+        className="mb-10 p-3 w-[250px] bg-[#303030] rounded-lg focus:outline-none"
         onChange={(e) => setSearchByTitle(e.target.value)}
       />
       {searchByTitle && (
