@@ -75,10 +75,10 @@ const UpdateMovie = () => {
         alt="background"
         className="absolute object-cover aspect-[2000/1125] w-[100%] h-[100%] z-0 opacity-60 "
       />
-      <div className="flex justify-center items-center z-10 mt-5 mb-5 bg-[#202020]">
+      <div className="flex justify-center items-center z-10 mt-5 mb-5 bg-[#202020] rounded-lg shadow-xl">
         <form
           method="post"
-          className="relative space-y-5 rounded-lg p-4 shadow-xl text-left sm:p-4 lg:p-8"
+          className="relative space-y-5 p-4 text-left sm:p-4 lg:p-8"
           onSubmit={onSubmit}
         >
           <Link to="/home">

@@ -109,7 +109,7 @@ function Menu({ isVisible }) {
           <Link to="/my-account">My Account</Link>
         </li>
         <li className=" mt-5 mb-2 p-3 font-mono font-extrabold text-xl text-center bg-rose-600 text-white rounded-lg">
-          <Link to="/*">Sign out</Link>
+          <Link to="/">Sign out</Link>
         </li>
       </ul>
     </div>
