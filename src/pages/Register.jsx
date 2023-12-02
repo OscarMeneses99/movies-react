@@ -6,6 +6,7 @@ import {
 } from "../utils/Notifications.jsx";
 import ArrowLeft from "../assets/ArrowLeft.jsx";
 import Background from "../assets/Background.jsx";
+import Cinema from "../assets/Cinema.jsx";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ const Register = () => {
           <Link to="/">
             <ArrowLeft />
           </Link>
-          <img src="/Cinema.png" alt="title" className="object-cover" />
+          <Cinema />
           <h1 className="text-3xl font-bold font-mono uppercase text-white mt-1">
             My Account
           </h1>

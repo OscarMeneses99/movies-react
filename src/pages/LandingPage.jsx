@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import Background from "../assets/Background";
+import Cinema from "../assets/Cinema.jsx";
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-black flex flex-col justify-center relative">
       <Background />
       <div className="z-10 flex justify-center gap-10 md:justify-between items-center w-full p-4 absolute top-0 flex-wrap">
-        <img src="/Cinema.png" alt="title" className="w-[180px]" />
+        <Cinema width="180"/>
         <div>
           <Link
             to="/login"

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ArrowLeft from "../assets/ArrowLeft.jsx";
 import Background from "../assets/Background.jsx";
+import Cinema from "../assets/Cinema.jsx";
 function Login() {
   return (
     <div className="relative flex flex-col min-h-screen w-[100%] bg-black">
@@ -10,7 +11,7 @@ function Login() {
           <Link to="/">
             <ArrowLeft />
           </Link>
-          <img src="/Cinema.png" alt="title" className="object-cover" />
+          <Cinema />
           <input
             type="text"
             className="mt-5 w-[300px] p-4 rounded-lg bg-[#303030] focus:outline-none "

@@ -4,6 +4,7 @@ import SettingsIcon from "../assets/SettingsIcon.jsx";
 import MenuIcon from "../assets/MenuIcon.jsx";
 import Menu from "./Menu.jsx";
 import Settings from "./Settings.jsx";
+import Cinema from "../assets/Cinema.jsx";
 
 function Navbar() {
   const activeStyle = "bg-rose-500 text-white px-3 py-2 rounded-lg";
@@ -28,7 +29,7 @@ function Navbar() {
         >
           <li className="mr-3 ml-8">
             <NavLink to="/home">
-              <img src="/Cinema.png" alt="cinema" className="w-[100px]" />
+              <Cinema width="100" />
             </NavLink>
           </li>
           <li className={`${styleLink}`}>
