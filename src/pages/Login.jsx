@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 import ArrowLeft from "../assets/ArrowLeft.jsx";
+import Background from "../assets/Background.jsx";
 function Login() {
   return (
     <div className="relative flex flex-col min-h-screen w-[100%] bg-black">
-      <img
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/d1532433-07b1-4e39-a920-0f08b81a489e/3d9a18e1-6755-4fe5-a73c-580bcf7a48b3/MX-es-20231120-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-        alt="background"
-        className="absolute object-cover aspect-[2000/1125] w-[100%] h-[100%] z-0 opacity-60 "
-      />
+      <Background />
       <main className="mx-auto max-w-lg flex flex-col justify-center items-center flex-wrap flex-grow mt-10 z-10">
         <form className="relative flex flex-col justify-center items-center rounded-xl p-10 bg-[#202020]">
           <Link to="/">
@@ -24,7 +21,7 @@ function Login() {
             placeholder="Password"
             className="mt-3 w-[300px] p-4 rounded-lg bg-[#303030] focus:outline-none"
           />
-          <button className="bg-rose-500 w-[300px] p-4 mt-7 mb-3 rounded-md text-white font-bold hover:bg-rose-600">
+          <button className="bg-rose-600 w-[300px] p-4 mt-7 mb-3 rounded-md text-white font-bold hover:bg-rose-700">
             Login
           </button>
           <div className="flex justify-end items-center mt-3">

@@ -7,6 +7,7 @@ import {
   ToastMovieUpdated,
   ToastMovieNotUpdated,
 } from "../utils/Notifications.jsx";
+import Background from "../assets/Background.jsx";
 
 const UpdateMovie = () => {
   const { fetchMovies } = useContext(MovieContext);
@@ -69,12 +70,8 @@ const UpdateMovie = () => {
       });
   });
   return (
-    <div className="relative flex justify-center items-center min-h-screen">
-      <img
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/d1532433-07b1-4e39-a920-0f08b81a489e/3d9a18e1-6755-4fe5-a73c-580bcf7a48b3/MX-es-20231120-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-        alt="background"
-        className="absolute object-cover aspect-[2000/1125] w-[100%] h-[100%] z-0 opacity-60 "
-      />
+    <div className="relative flex justify-center items-center min-h-screen bg-black">
+      <Background />
       <div className="flex justify-center items-center z-10 mt-5 mb-5 bg-[#202020] rounded-lg shadow-xl">
         <form
           method="post"

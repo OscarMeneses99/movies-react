@@ -3,7 +3,6 @@ import { useContext } from "react";
 import ChevronIcon from "../assets/ChevronLeftIcon.jsx";
 import ButtonDelete from "../components/ButtonDelete.jsx";
 import ButtonModify from "../components/ButtonModify.jsx";
-import Footer from "../components/Footer.jsx";
 import { MovieContext } from "../context/Context.jsx";
 
 function MovieInfo() {

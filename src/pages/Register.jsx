@@ -5,6 +5,7 @@ import {
   ToastUserNotCreated,
 } from "../utils/Notifications.jsx";
 import ArrowLeft from "../assets/ArrowLeft.jsx";
+import Background from "../assets/Background.jsx";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -42,11 +43,7 @@ const Register = () => {
   const errorsStyle = "text-rose-800 text-sm font-mono font-bold mt-1";
   return (
     <div className="relative flex flex-col min-h-screen w-[100%] bg-black">
-      <img
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/d1532433-07b1-4e39-a920-0f08b81a489e/3d9a18e1-6755-4fe5-a73c-580bcf7a48b3/MX-es-20231120-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-        alt="background"
-        className="absolute object-cover aspect-[2000/1125] w-[100%] h-[100%] z-0 opacity-60"
-      />
+      <Background />
       <main className="mx-auto max-w-lg flex flex-col justify-center items-center flex-wrap flex-grow mt-10 mb-5 z-10">
         <form
           className="relative flex flex-col justify-center items-center rounded-xl p-10 bg-[#202020]"
@@ -139,7 +136,7 @@ const Register = () => {
             )}
           </div>
 
-          <button className="bg-rose-500 w-[300px] p-4 mt-4 mb-6 rounded-md text-white font-bold hover:bg-rose-600">
+          <button className="bg-rose-600 w-[300px] p-4 mt-4 mb-6 rounded-md text-white font-bold hover:bg-rose-700">
             Create
           </button>
           <div className="flex justify-end items-center">
