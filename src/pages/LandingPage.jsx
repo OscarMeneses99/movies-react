@@ -23,8 +23,8 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="z-10 flex flex-col justify-center items-center">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-center">
+      <div className="z-10 flex flex-col justify-center items-center text-center">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold">
           Welcome to Cinema
         </h1>
         <div>
