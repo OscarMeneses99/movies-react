@@ -27,7 +27,7 @@ function ListOfMovies({ genre }) {
             </figure>
           ))
         ) : (
-          <p className="absolute mt-[100px] text-xl font-light text-white/70 italic">
+          <p className="absolute top-[50%] right-auto left-auto text-center text-xl font-light text-white/70 italic">
             No Movies Found
           </p>
         )}
