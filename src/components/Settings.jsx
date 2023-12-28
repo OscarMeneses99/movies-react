@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 const Settings = ({ isVisible }) => {
   return (
     <div
-      className={`rounded-lg w-[220px] absolute top-[50px] right-1 m-2 bg-[#303030] z-10 
+      className={`rounded-lg w-[220px] absolute top-[65px] right-1 m-2 bg-[#303030] z-10 
     ${isVisible ? "" : "hidden"}`}
     >
       <ul className="p-4">

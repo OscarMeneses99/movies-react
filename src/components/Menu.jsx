@@ -4,7 +4,7 @@ function Menu({ isVisible }) {
   const styleLink = "hover:scale-110 transition-all hover:text-rose-400";
   return (
     <div
-      className={`rounded-lg w-[220px] absolute top-[50px] right-1 m-2 bg-[#303030] z-10 
+      className={`rounded-lg w-[220px] absolute top-[65px] right-1 m-2 bg-[#303030] z-10 
       ${isVisible ? "" : "hidden"}`}
     >
       <h1 className="mb-4 ml-3 mt-3 font-mono font-semibold text-2xl text-left  text-white">
