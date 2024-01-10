@@ -10,17 +10,12 @@ const LandingPage = () => {
         <Cinema width="180"/>
         <div>
           <Link
-            to="/login"
+            to="/home"
             className="bg-rose-600 text-white text-xl rounded-lg p-3 font-bold hover:bg-rose-500 transition-all"
           >
-            Login
+            Getting Started
           </Link>
-          <Link
-            to="/register"
-            className="bg-orange-600 text-white text-xl rounded-lg p-3 font-bold hover:bg-orange-500 transition-all ml-4"
-          >
-            Register
-          </Link>
+
         </div>
       </div>
 
